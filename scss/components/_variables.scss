@@ -4,26 +4,65 @@
   --accent-l: 50%;
 
   /* --background: hsl(var(--accent-h), var(--accent-s), min(95%, calc(var(--accent-l) * 1.9))); */
-  /* --foreground-accent: hsl(var(--accent-h), var(--accent-s), max(5%, calc(var(--accent-l) * .3))); */
 
   --gradient-text:
-    hsl(var(--accent-h), calc(var(--accent-s) * .95), max(0%, calc(var(--accent-l) * .8))),
-    hsl(var(--accent-h), calc(var(--accent-s) * .7), max(0%, calc(var(--accent-l) * .5)));
+    hsl(var(--accent-h), calc(var(--accent-s) * .95), calc(var(--accent-l) * .8)),
+    hsl(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .5));
 
   --gradient-background:
     hsl(var(--accent-h), var(--accent-s), min(100%, calc(var(--accent-l) * 2))),
     hsl(var(--accent-h), calc(var(--accent-s) * .7), min(100%, calc(var(--accent-l) * 1.7)));
 
-  --box-border: 1px solid hsl(var(--accent-h), var(--accent-s), max(0%, calc(var(--accent-l) * .5)));
+  --cover-filter: sepia(10%) saturate(80%) hue-rotate(10deg);
+
+  --details-text: hsl(var(--accent-h), calc(var(--accent-s) * .9), calc(var(--accent-l) * .6));
+  --details-padding: .25rem .6rem; //.1rem .35rem;
+
+  --box-border: 1px solid hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) * .5));
   --outer-shadow: 0 0 .9rem hsla(var(--accent-h), calc(var(--accent-s) * .85), calc(var(--accent-l) * .5), .9);
   --inset-shadow: inset 0 0 .6rem hsla(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .7), .8);
-  --inset-shadow-body: inset 0 0 3.5rem hsla(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .3), .7);
+  --inset-shadow-sm: inset 0 0 .4rem hsla(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .8), .75);
+  --inset-shadow-lg: inset 0 0 3.5rem hsla(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .3), .7);
   --rounded-corner: .4rem;
   --box-padding: 2rem;
 
-  --text-glow: 0 0 .8rem hsl(var(--accent-h), var(--accent-s), min(100%, calc(var(--accent-l) * 1.2)));
+  --box-width: 450px;
+  --btn-size: calc(calc(var(--box-width) - 4px) / 5);
 
-  /* --font-size: 16px; */
+  --text-glow: 0 0 .65rem hsla(var(--accent-h), calc(var(--accent-s) * .85), min(100%, calc(var(--accent-l) * .9)), .8);
+
+  --box-transition:
+    background .12s ease-out,
+    box-shadow .12s ease-out;
+  --icon-transition:
+    filter .12s ease-out,
+    color .12s ease-out,
+    transform .12s ease-out;
+
+  --icon-color: hsla(var(--accent-h), calc(var(--accent-s) * .8), calc(var(--accent-l) * .6), .9);
+  --icon-color-hover: hsla(var(--accent-h), calc(var(--accent-s) * .8), calc(var(--accent-l) * .52), .9);
+  --icon-color-active: hsl(var(--accent-h), calc(var(--accent-s) * .76), calc(var(--accent-l) * .46));
+
+  --icon-glow: 0 0 .8rem hsla(var(--accent-h), calc(var(--accent-s) * .8), calc(var(--accent-l) * .5), .8);
+  --icon-glow-hover: 0 0 .85rem hsla(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .4), .9);
+  --icon-glow-active: 0 0 .9rem hsl(var(--accent-h), calc(var(--accent-s) * .64), calc(var(--accent-l) * .33));
+  
+  --icon-offset-hover: .08rem;
+  --icon-offset-active: .12rem;
+
+  --btn-shadow-hover:
+    inset 0 .16rem .06rem hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) * .65), .9),
+    inset 0 0 .2rem hsla(var(--accent-h), calc(var(--accent-s) * .8), calc(var(--accent-l) * .7), .6);
+  --btn-shadow-active:
+    inset 0 .24rem .04rem hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) * .52), .9),
+    inset 0 0 .3rem hsla(var(--accent-h), calc(var(--accent-s) * .72), calc(var(--accent-l) * .65), .72);
+
+  --btn-background-hover:
+    transparent,
+    hsla(var(--accent-h), calc(var(--accent-s) * .52), calc(var(--accent-l) * .8), .08);
+  --btn-background-active:
+    hsla(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .9), .03),
+    hsla(var(--accent-h), calc(var(--accent-s) * .56), calc(var(--accent-l) * .8), .13);
 
   /* @media (prefers-color-scheme: dark) {
 

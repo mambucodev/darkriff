@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^13.5.0",
+    "@phosphor-icons/react": "^2.1.10",
     "next": "15.4.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"

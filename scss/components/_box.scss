@@ -1,16 +1,82 @@
 .box {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(var(--gradient-background));
   border: var(--box-border);
+  background: linear-gradient(var(--gradient-background));
   box-shadow: var(--inset-shadow), var(--outer-shadow);
   border-radius: var(--rounded-corner);
-  
-  /* width: 10rem; */
-  
+  width: var(--box-width);
+  overflow: hidden;
+
   .box-content {
     display: flex;
     flex-direction: column;
     padding: var(--box-padding);
+    box-shadow: var(--inset-shadow-sm);
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    bottom: 0;
+    border-top: var(--box-border);
+    box-shadow: var(--inset-shadow-sm);
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      transition: var(--box-transition);
+
+      width: var(--btn-size);
+      height: var(--btn-size);
+      justify-content: center;
+      text-align: center;
+      padding: auto;
+
+      font-size: 32px;
+
+      svg {
+        color: var(--icon-color);
+        filter: drop-shadow(var(--icon-glow));
+        transition: var(--icon-transition);
+      }
+
+      &:not(:last-child) {
+        border-right: var(--box-border);
+        width: calc(var(--btn-size) + 1px);
+      }
+      
+      &:first-child {
+        border-radius: 0 0 0 var(--rounded-corner);
+      }
+      
+      &:last-child {
+        border-radius: 0 0 var(--rounded-corner);
+      }
+
+      &:hover:not(.active) {
+        box-shadow: var(--btn-shadow-hover);
+        background: linear-gradient(var(--btn-background-hover));
+
+        svg {
+          color: var(--icon-color-hover);
+          filter: drop-shadow(var(--icon-glow-hover));
+          transform: translateY(var(--icon-offset-hover));
+        }
+      }
+
+      &:active, &.active {
+        box-shadow: var(--btn-shadow-active);
+        background: linear-gradient(var(--btn-background-active));
+
+        svg {
+          color: var(--icon-color-active);
+          filter: drop-shadow(var(--icon-glow-active));
+          transform: translateY(var(--icon-offset-active));
+        }
+      }
+    }
   }
 }

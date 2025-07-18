@@ -1,0 +1,22 @@
+.cover {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--outer-shadow);
+  border-radius: var(--rounded-corner);
+  border: var(--box-border);
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: auto;
+    filter: var(--cover-filter);
+  }
+  
+  .details {
+    color: var(--details-text);
+    padding: var(--details-padding);
+    font-family: var(--font-space-grotesk);
+  }
+}
