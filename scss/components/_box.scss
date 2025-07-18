@@ -1,0 +1,7 @@
+.box {
+  background: linear-gradient(var(--gradient-background));
+  border: var(--box-border);
+  padding: var(--box-padding);
+  box-shadow: var(--inset-shadow);
+  border-radius: var(--rounded-corner);
+}
