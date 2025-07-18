@@ -1,0 +1,13 @@
+:root {
+  --accent-h: 36;
+  --accent-s: 100%;
+  --accent-l: 50%;
+
+  --background: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) * 2));
+  --foreground-accent: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) * 0.3));
+  --foreground: hsl(0, 0, 22%);
+
+  /* @media (prefers-color-scheme: dark) {
+
+  } */
+}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/scss/style.scss";
 
 export const metadata: Metadata = {
   title: "DarkRiff Station",
