@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  bottom: 0;
+  border-top: var(--box-border);
+  
+  button {
+    flex: 1;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    padding: auto;
+
+    &:hover {
+      background-color: var(--hover-color);
+    }
+    
+    &:not(:last-child) {
+      border-right: var(--box-border);
+    }
+  }
+}

@@ -5,7 +5,8 @@ h4,
 h5,
 h6 {
   background: linear-gradient(var(--gradient-text));
-  text-shadow: var(--text-glow);
+  /* text-shadow: var(--text-glow); */
+  filter: drop-shadow(var(--text-glow));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

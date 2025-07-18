@@ -1,7 +1,16 @@
 .box {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(var(--gradient-background));
   border: var(--box-border);
-  padding: var(--box-padding);
-  box-shadow: var(--inset-shadow);
+  box-shadow: var(--inset-shadow), var(--outer-shadow);
   border-radius: var(--rounded-corner);
+  
+  /* width: 10rem; */
+  
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--box-padding);
+  }
 }
