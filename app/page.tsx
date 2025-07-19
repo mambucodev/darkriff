@@ -1,5 +1,6 @@
 "use client"
 
+import { SiSoundcloud } from "@icons-pack/react-simple-icons";
 import {
   PauseIcon,
   PlayIcon,
