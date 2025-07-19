@@ -1,8 +1,13 @@
 "use client"
 
-import { PauseIcon, PlayIcon, RewindIcon, FastForwardIcon, DotsThreeOutlineVerticalIcon } from "@phosphor-icons/react/ssr";
-// import { SiSoundcloud } from "@icons-pack/react-simple-icons";
-import { ChangeEvent, useState } from "react";
+import {
+  PauseIcon,
+  PlayIcon,
+  RewindIcon,
+  FastForwardIcon,
+  FadersIcon,
+} from "@phosphor-icons/react";
+import { useState } from "react";
 
 export default function Home() {
   const [songProgress, setSongProgress] = useState<number>(0);
@@ -20,10 +25,11 @@ export default function Home() {
 
   return (
     <div className="container-fill">
+      <h1>Darkriff Station</h1>
       <div className="box">
         <div className="box-content">
           <div className="cover">
-            <img src="/cover.jpg" />
+            <img src="/cover.jpg" loading="eager" />
             <div className="details">
               <strong>YOUtopia</strong> - Bring Me The Horizon
             </div>
@@ -49,10 +55,18 @@ export default function Home() {
             <FastForwardIcon weight="fill" />
           </button>
           <button onMouseDown={() => setShowSettings(!showSettings)} className={showSettings ? "active" : ""}>
-            <DotsThreeOutlineVerticalIcon weight="fill" />
+            <FadersIcon weight="fill" />
           </button>
         </div>
       </div>
+      <noscript>
+        <div className="noscript">
+          <div className="noscript-box">
+            <h1>Javascript is Disabled</h1>
+            <p>We're sorry, but this is a web radio station. In order to work (stream music, have interactive UI/UX) we need JavaScript to be enabled on your browser.</p>
+          </div>
+        </div>
+      </noscript>
     </div>
   );
 }

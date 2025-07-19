@@ -1,0 +1,35 @@
+.noscript {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: disabled;
+
+  top: 0;
+  left: 0;
+
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+
+  background: var(--noscript-background);
+
+  .noscript-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--noscript-box-padding);
+    border: var(--box-border);
+    background: linear-gradient(var(--gradient-background));
+    box-shadow: var(--inset-shadow), var(--outer-shadow);
+    border-radius: var(--rounded-corner);
+    width: var(--noscript-box-width);
+    overflow: hidden;
+    
+    & > :not(:last-child) {
+      margin: var(--noscript-box-spacing);
+    }
+  }
+}
