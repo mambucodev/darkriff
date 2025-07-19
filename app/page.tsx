@@ -12,6 +12,7 @@ import { useState } from "react";
 export default function Home() {
   const [songProgress, setSongProgress] = useState<number>(0);
   const [status, setStatus] = useState<boolean>(false);
+  const [cover, setCover] = useState<undefined | string>("/cover.jpg");
   const [showSettings, setShowSettings] = useState<boolean>(false);
 
   function parseDuration(secondsRaw: number) {
