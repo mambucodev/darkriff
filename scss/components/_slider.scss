@@ -20,9 +20,12 @@
     
     -webkit-appearance: none;
     background: transparent;
-    /* height: var(--slider-track-height); */
     
-    &::-webkit-slider-thumb, &::-moz-range-thumb, &::-ms-thumb {
+    &:focus {
+      outline: none;
+    }
+    
+    @mixin slider-thumb() {
       -webkit-appearance: none;
       cursor: ew-resize;
       margin: -5px 0 0;
@@ -34,11 +37,7 @@
       box-shadow: var(--inset-shadow-sm), var(--outer-shadow);
     }
     
-    &:focus {
-      outline: none;
-    }
-    
-    &::-webkit-slider-runnable-track, &::-moz-range-track {
+    @mixin slider-track() {
       width: 100%;
       cursor: pointer;
       border: var(--box-border);
@@ -51,14 +50,21 @@
         box-shadow: var(--inset-shadow), var(--slider-glow);
       }
     }
+
+    &::-webkit-slider-thumb {
+      @include slider-thumb();
+    } &::-moz-range-thumb {
+      @include slider-thumb();
+    } &::-ms-thumb {
+      @include slider-thumb();
+    }
     
-    &::-ms-track {
-      width: 100%;
-      height: var(--slider-height);
-      cursor: pointer;
-      background: transparent;
-      border-color: transparent;
-      color: transparent;
+    &::-webkit-slider-runnable-track {
+      @include slider-track();
+    } &::-moz-range-track {
+      @include slider-track();
+    } &::-ms-track {
+      @include slider-track();
     }
   }
 }
