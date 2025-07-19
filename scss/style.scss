@@ -2,6 +2,7 @@
 @use "components/container";
 @use "components/cover";
 @use "components/general";
+@use "components/slider";
 @use "components/typography";
 @use "components/variables";
 
@@ -9,7 +10,7 @@
 body {
   max-width: 100vw;
   overflow-x: hidden;
-} */
+} */                  
 
 * {
   box-sizing: border-box;

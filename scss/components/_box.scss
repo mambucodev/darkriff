@@ -13,13 +13,16 @@
     flex-direction: column;
     padding: var(--box-padding);
     box-shadow: var(--inset-shadow-sm);
+    
+    & > :not(:last-child) {
+      margin: var(--box-content-spacing);
+    }
   }
 
   .navbar {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    bottom: 0;
     border-top: var(--box-border);
     box-shadow: var(--inset-shadow-sm);
 
@@ -35,7 +38,7 @@
       text-align: center;
       padding: auto;
 
-      font-size: 32px;
+      font-size: var(--btn-icon-size);
 
       svg {
         color: var(--icon-color);
@@ -56,7 +59,7 @@
         border-radius: 0 0 var(--rounded-corner);
       }
 
-      &:hover:not(.active) {
+      &:hover:not(:active):not(.active) {
         box-shadow: var(--btn-shadow-hover);
         background: linear-gradient(var(--btn-background-hover));
 

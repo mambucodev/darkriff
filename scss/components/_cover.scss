@@ -16,7 +16,10 @@
   
   .details {
     color: var(--details-text);
+    text-shadow: var(--text-glow);
+    border-top: var(--box-border);
     padding: var(--details-padding);
+    box-shadow: var(--inset-shadow-sm);
     font-family: var(--font-space-grotesk);
   }
 }
