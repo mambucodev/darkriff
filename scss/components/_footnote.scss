@@ -1,0 +1,22 @@
+.footnote {
+  font-family: var(--font-space-grotesk);
+  font-size: var(--footnote-size);
+  color: var(--text-color);
+  text-shadow: var(--text-glow);
+  padding: var(--footnote-padding);
+  border-radius: 0 0 var(--rounded-corner) var(--rounded-corner);
+  border: var(--box-border);
+  border-top: none;
+  background: var(--footnote-background);
+  box-shadow: var(--inset-shadow), var(--outer-shadow);
+  width: fit-content;
+  align-self: flex-end;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  svg {
+    margin: var(--footnote-icon-spacing);
+  }
+}

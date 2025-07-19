@@ -25,6 +25,7 @@
 
   --text-color: hsl(var(--accent-h), calc(var(--accent-s) * .9), calc(var(--accent-l) * .6));
 
+  --cover-height: calc(var(--box-width) - var(--box-padding) * 2 - 4px);
   --cover-filter: sepia(10%) saturate(80%) hue-rotate(10deg);
   --details-padding: .25rem .6rem;
 
@@ -33,7 +34,7 @@
   --slider-spacing: 0 .5rem;
   --slider-height: 8px;
   --slider-corner: var(--slider-height);
-  
+
   --slider-thumb-height: 16px;
   --slider-thumb-width: 8px;
   --slider-thumb-corner: 2px;
@@ -42,7 +43,7 @@
   --slider-track-1: hsl(var(--accent-h), calc(var(--accent-s) * .6), calc(var(--accent-l) * 1.2));
   --slider-track-2: hsl(var(--accent-h), calc(var(--accent-s) * .75), calc(var(--accent-l) * .7));
 
-  --btn-size: calc(calc(var(--box-width) - 4px) / 5);
+  --btn-size: calc((var(--box-width) - 4px) / 5);
   --btn-icon-size: 36px;
 
   --text-glow: 0 0 .65rem hsla(var(--accent-h), calc(var(--accent-s) * .85), min(100%, calc(var(--accent-l) * .9)), .8);
@@ -79,7 +80,12 @@
   --btn-background-active:
     hsla(var(--accent-h), calc(var(--accent-s) * .7), calc(var(--accent-l) * .9), .03),
     hsla(var(--accent-h), calc(var(--accent-s) * .56), calc(var(--accent-l) * .8), .13);
-    
+
+  --footnote-size: 16px;
+  --footnote-padding: .4rem .6rem;
+  --footnote-icon-spacing: 0 0 0 .35rem;
+  --footnote-background: hsl(var(--accent-h), calc(var(--accent-s) * .6), min(100%, calc(var(--accent-l) * 1.8)));
+
   --noscript-background: hsla(var(--accent-h), calc(var(--accent-s) * .2), calc(var(--accent-l) * .6), .4);
   --noscript-box-spacing: 0 0 .8rem;
   --noscript-box-padding: 3rem;

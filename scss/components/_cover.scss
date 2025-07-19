@@ -8,10 +8,11 @@
   border: var(--box-border);
   overflow: hidden;
   
-  img {
+  .cover-image {
     width: 100%;
-    height: auto;
+    height: var(--cover-height);
     filter: var(--cover-filter);
+    background-size: cover;
   }
   
   .details {

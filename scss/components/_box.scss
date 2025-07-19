@@ -1,10 +1,15 @@
+.box-grouping {
+  display: flex;
+  flex-direction: column;
+}
+
 .box {
   display: flex;
   flex-direction: column;
   border: var(--box-border);
   background: linear-gradient(var(--gradient-background));
   box-shadow: var(--inset-shadow), var(--outer-shadow);
-  border-radius: var(--rounded-corner);
+  border-radius: var(--rounded-corner) var(--rounded-corner) 0;
   width: var(--box-width);
   overflow: hidden;
 
