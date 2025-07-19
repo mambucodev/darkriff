@@ -47,7 +47,7 @@ export default function Home() {
             <button>
               <RewindIcon weight="fill" />
             </button>
-            <button onMouseDown={() => {setStatus(true); playSong();}} className={status ? "active" : ""}>
+            <button onMouseDown={() => setStatus(true)} className={status ? "active" : ""}>
               <PlayIcon weight="fill" />
             </button>
             <button onMouseDown={() => setStatus(false)} className={status ? "" : "active"}>
